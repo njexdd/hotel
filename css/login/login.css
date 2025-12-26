@@ -1,0 +1,101 @@
+body {
+  font-family: "Geist", sans-serif;
+  background-image: linear-gradient(to right bottom, #f8fafc 0%, #f1f5f9 100%);
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+.auth {
+  background-color: #fff;
+  border-radius: 14px;
+  max-width: 450px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.auth__content {
+  padding: 56px 32px;
+}
+.logo {
+  background-color: #003884;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+.auth__img {
+  width: 24px;
+  height: 24px;
+}
+.auth__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.auth__title {
+  color: #12171a;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 8px;
+}
+.auth__desc {
+  color: #6f757a;
+  line-height: 20px;
+  font-family: 14px;
+}
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.auth__email, .auth__password {
+  display: flex;
+  flex-direction: column;
+}
+.auth__label {
+  color: #12171a;
+  font-weight: 500;
+}
+.auth__input {
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 4px 12px;
+  height: 28px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #12171a;
+}
+
+.auth__input:focus {
+  border: 1px solid #003884;
+}
+.auth__login {
+  background-color: #003884;
+  border-radius: 10px;
+  height: 48px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+.auth__login:hover {
+  background-color: #1a4c91;
+}
+.auth__login:disabled {
+  background-color: #003884;
+  border-radius: 10px;
+  height: 48px;
+  color: #fff;
+  cursor: auto;
+  opacity: .5;
+}

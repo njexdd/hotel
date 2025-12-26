@@ -1,0 +1,556 @@
+body {
+  font-family: "Geist", sans-serif;
+}
+
+.container {
+  max-width: 770px;
+  margin: 0 auto;
+  padding: 24px 24px;
+}
+
+.layout {
+  display: flex;
+}
+
+.sidebar {
+  background-color: #fafafa;
+  padding-top: 64px;
+  width: 255px;
+
+  border-right: 1px solid #dfe6eb;
+}
+
+.nav {
+  position: fixed;
+  padding: 16px;
+}
+
+.nav__item {
+  padding: 8px 12px;
+  border-radius: 8px;
+
+  transition: all .3s ease;
+}
+
+.nav__item:hover {
+  background-color: #dbe6f2;
+
+  .nav__item-link {
+    color: #00388b;
+  }
+}
+
+.nav__item svg {
+  width: 16px;
+  height: 16px;
+}
+
+.nav__item-link {
+  font-weight: 500;
+  line-height: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.layout-main {
+  flex: 1;
+}
+
+.header {
+  position: fixed;
+  width: calc(100% - 304px);
+  right: 0;
+
+  background-color: #fff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 24px;
+
+  border-bottom: 1px solid #dfe6eb;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__logo-img {
+  background-color: #003884;
+  border-radius: 10px;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform .3s ease;
+}
+
+.header__logo-img:hover {
+  transform: scale(1.1);
+}
+
+.header__logo-img img {
+  height: 20px;
+  width: 20px;
+}
+
+.header__title {
+  color: #12171a;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.header__exit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0 10px;
+  height: 32px;
+  border-radius: 8px;
+
+  border: 1px solid #dfe6eb;
+
+  cursor: pointer;
+
+  color: #12171a;
+  line-height: 20px;
+  font-weight: 500;
+
+  transition: all .3s ease;
+}
+
+.header__exit:hover {
+  background-color: #0091ff;
+  color: white;
+}
+
+.main {
+  margin-top: 64px;
+  background-color: #f8f8f9;
+
+  min-height: calc(100vh - 67px);
+}
+
+.main__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  margin-bottom: 24px;
+}
+
+.main__title {
+  color: #12171a;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+
+  margin-bottom: 5px;
+}
+
+.main__desc {
+  color: #6f757a;
+}
+
+.main__cancel-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+
+  border: 1px solid #dfe6eb;
+
+  cursor: pointer;
+
+  color: #12171a;
+  line-height: 20px;
+  font-weight: 500;
+
+  transition: all .3s ease;
+}
+
+.main__cancel-button:hover {
+  background-color: #0091ff;
+  color: white;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.booking-form__customers-choice, .booking-form__dates, .booking-form__room-selection, .booking-form__calculation{
+  background-color: #fff;
+  border: 1px solid #dfe6eb;
+  border-radius: 14px;
+  padding: 24px;
+
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+}
+
+.booking-form__title {
+  color: #12171a;
+  line-height: 28px;
+  font-weight: 600;
+  font-size: 18px;
+
+  margin-bottom: 40px;
+}
+
+.booking-form__fields {
+  display: flex;
+  gap: 16px;
+}
+
+.booking-form__field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  position: relative;
+}
+
+.booking-form__label {
+  color: #12171a;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.booking-form__input {
+  margin-bottom: 16px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 1px solid #eff2f5;
+
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+
+  line-height: 20px;
+
+  height: 26px;
+}
+
+.booking-form__input:focus {
+  border: 1px solid #003884;
+}
+
+.search__results {
+  display: none;
+  position: absolute;
+  top: 60px;
+  max-height: 250px; 
+  overflow-y: auto; 
+
+  background-color: #fff;
+  border: 1px solid #dfe6eb;
+  border-radius: 8px;
+}
+
+.search__result-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid #dfe6eb;
+  
+  cursor: pointer;
+
+  transition: all .3s ease;
+}
+
+.search__result-item:hover {
+  background-color: #f5f5f5;
+}
+
+.search__result-item:last-child {
+  border-bottom: none;
+}
+
+.search__result-name {
+  color: #12171a;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.search__result-phone {
+  color: #6f757a;
+  line-height: 20px;
+}
+    
+.error-message {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.success-message {
+  color: #28a745;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.booking-form__create-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  background-color: #dbe6f2;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-top: 40px;
+
+  color: #003884;
+  line-height: 20px;
+  font-weight: 500;
+
+  transition: all .3s ease;
+}
+
+.booking-form__client {
+  background-color: #dbe6f2;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.booking-form__client-name {
+  color: #12171a;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.booking-form__client-contact {
+  color: #6f757a;
+  line-height: 20px;
+}
+
+.booking-form__change-button {
+  padding: 0 12px;
+  border-radius: 8px;
+  height: 32px;
+  background-color: transparent;
+  
+  cursor: pointer;
+
+  color: #12171a;
+  line-height: 20px;
+
+  transition: all .3s ease;
+}
+
+.booking-form__change-button:hover {
+  color: #fff;
+  background-color: #0091ff;
+}
+
+.booking-form__create-user svg {
+  width: 16px;
+  height: 16px;
+}
+
+.booking-form__create-user:hover {
+  background-color: #e2ebf4;
+}
+
+.booking-form__customers-choice .booking-form__input {
+  padding-left: 40px;
+
+  background-image: url(../../images/icons/search-icon.png);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position-y: center;
+  background-position-x: 12px;
+}
+
+.booking-form__rooms {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.booking-form__room {
+  border: 2px solid #dfe6eb;
+  border-radius: 10px;
+  padding: 16px;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  transition: all .3s ease;
+}
+
+.booking-form__room svg {
+  color: #003884;
+}
+
+.booking-form__room:hover {
+  border-color: #809cc2;
+}
+
+.booking-form__room_selected {
+  border-color: #003884;
+  background-color: #f2f5f9;
+}
+
+.booking-form__room-parameters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 4px;
+}
+
+.booking-form__room-number {
+  color: #12171a;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.booking-form__room-type {
+  background-color: #dbe6f2;
+  border-radius: 4px;
+  padding: 4px 8px;
+
+  color: #12171a;
+  line-height: 20px;
+}
+
+.booking-form__room-capacity, .booking-form__room-equipment {
+  color: #6f757a;
+  line-height: 20px;
+}
+
+.booking-form__room-equipment {
+  margin-bottom: 8px;
+}
+
+.booking-form__room-cost {
+  color: #003884;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.booking-form__calculation {
+  background-color: #e9eff5;
+  border-color: #7392bc;
+}
+
+.booking-form__number-days, .booking-form__price-day, .booking-form__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #12171a;
+  line-height: 24px;
+
+  margin-bottom: 12px;
+}
+
+hr {
+  margin: 0;
+  border: 0;
+  height: 1px;
+  background-color: #dfe6eb;
+}
+
+.booking-form__total {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.booking-form__total_bold {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.booking-form__total_cost {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #003884;
+}
+
+.booking-form__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.booking-form__cancel-button {
+  color: #12171a;
+  line-height: 20px;
+  font-weight: 500;
+  text-align: center;
+
+  background-color: transparent;
+  border: 1px solid #dfe6eb;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 100%;
+
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+}
+
+.booking-form__cancel-button:hover {
+  background-color: #0091ff;
+  color: white;
+}
+
+.booking-form__create-button {
+  color: #fff;
+  line-height: 20px;
+  font-weight: 500;
+
+  background-color: #003884;
+  border-radius: 8px;
+  padding: 9px 16px;
+  width: 100%;
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+}
+
+.booking-form__create-button:hover {
+  background-color: #194b90;
+}
+
+.booking-form__create-button:disabled {
+  background-color: #003884;
+  border-radius: 8px;
+
+  color: #fff;
+
+  cursor: auto;
+
+  opacity: .5;
+}
